@@ -1,0 +1,274 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    height: 100vh;
+    color: #e41b90f1;
+    padding-bottom: 50px;
+    background: linear-gradient(to bottom right, #ffe1f2, #f8b4e0, #e0b3ff) no-repeat fixed;
+}
+
+#about {
+    background: linear-gradient(135deg, #ffe0f0, #ffd1ec);
+}
+
+#contact {
+    background: linear-gradient(135deg, #fbd0f9, #eecbff);
+}
+
+#todo {
+    background: linear-gradient(135deg, #ffedf9, #e6d0ff);
+}
+
+#products {
+    background: linear-gradient(135deg, #ffe5f7, #e3ccff);
+}
+
+#projects {
+    background: linear-gradient(135deg, #ffe0f0, #ffd1ec);
+}
+#about:hover,
+#contact:hover,
+#projects:hover,
+#todo:hover,
+#products:hover {
+    background: linear-gradient(135deg, #f8b4e0, #e0b3ff);
+    transform: scale(1.05);
+}
+
+/* Header / Navigation */
+header {
+    background-color: rgba(241, 108, 130, 0.688);
+    padding: 15px 20px;
+}
+
+#heading {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+#heading:hover {
+    color: #222222e9;
+    font-weight: bold;
+    font-size: 35px;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #222;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: #b63fe9ab;
+    border-radius: 5px;
+}
+
+/* Sections */
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+    margin-bottom: 20px;
+    color: #b63fe9e5;
+}
+
+/* Project Cards */
+.project-card {
+    border: 1px solid #ddd;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+/* Contact Form */
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #c310e7;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* To-Do List */
+#todo input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+}
+
+#todo button {
+    padding: 10px;
+    margin-left: 5px;
+    background-color: #a72894bf;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#todo button:hover {
+    background-color: #21883794;
+}
+
+#taskList {
+    list-style: none;
+    padding-left: 0;
+}
+
+#taskList li {
+    padding: 10px;
+    background-color: #eee;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#taskList li button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#taskList li button:hover {
+    background-color: darkred;
+}
+
+/* Product Listing */
+#products select {
+    padding: 8px;
+    margin: 10px 10px 20px 0;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(244, 194, 211, 0.703);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    #todo input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #todo button {
+        width: 100%;
+    }
+
+    #about {
+        text-align: center;
+        margin-right: 40px;
+    }
+
+    #projects {
+        text-align: center;
+        margin-right: 40px;
+    }
+
+    #contact {
+        text-align: center;
+        margin-right: 40px;
+    }
+
+    #products {
+        text-align: center;
+        margin-right: 40px;
+    }
+
+    #todo {
+        text-align: center;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All-in-One Project Page</title>
+    <link rel="stylesheet" href="task_4.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <h2 id="heading">PARINEETA SAHA</h2>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#todo">To-Do List</a></li>
+                <li><a href="#products">Product Listing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1>About Me</h1>
+        <p>Hello! I'm Parineeta Saha, a web developer with a passion for creating interactive websites.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-card">
+            <h3>E-commerce website</h3>
+            <p>A responsive site showcasing e-commerce webpage with products listings along with categories and pricing.
+            </p>
+        </div>
+        <div class="project-card">
+            <h3>To-Do App</h3>
+            <p>A productivity app to manage tasks using local storage.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form onsubmit="event.preventDefault(); alert('Message Sent!');">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- To-Do List Section -->
+    <section id="todo">
+        <h2>To-Do List</h2>
+        <input type="text" id="taskInput" placeholder="Add a new task" />
+        <button onclick="addTask()">Add</button>
+        <ul id="taskList"></ul>
+    </section>
+
+    <!-- Product Listing Section -->
+    <section id="products">
+        <h2>Product Listing</h2>
+
+        <label for="categoryFilter">Category:</label>
+        <select id="categoryFilter" onchange="filterAndSortProducts()">
+            <option value="all">All</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="book">Books</option>
+        </select>
+
+        <label for="sortPrice">Sort by Price:</label>
+        <select id="sortPrice" onchange="filterAndSortProducts()">
+            <option value="default">Default</option>
+            <option value="low-high">Low to High</option>
+            <option value="high-low">High to Low</option>
+        </select>
+
+        <div id="productContainer"></div>
+    </section>
+    <footer>
+        <p>&copy; 2025 PARINEETA SAHA. All rights reserved.</p>
+    </footer>
+    <script src="task_4.js"></script>
+</body>
+
+</html>
